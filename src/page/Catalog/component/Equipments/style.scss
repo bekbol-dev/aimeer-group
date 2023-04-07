@@ -1,0 +1,102 @@
+#equipments {
+  .equipments {
+    &--titles {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      h1{
+        width: 100%;
+        @extend %title;
+      }
+      p{
+        margin-left: 10%;
+        @extend %description;
+      }
+    }
+
+    &--list {
+      padding: 5% 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: start;
+
+      &--card {
+        width: 350px;
+        margin: 20px;
+
+        &--image {
+          width: 100%;
+          background: #F5F5F5;
+          padding: 20px 2rem;
+
+          img {
+            width: 95%;
+          }
+        }
+
+        h3 {
+          margin: 10px 0;
+          @extend %medium-text;
+        }
+
+        p {
+          @extend %description;
+          font-size: calc(10px + 6 * (100vw / 1400));
+          line-height: 120%;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 912px) {
+
+}
+
+@media (max-width: 820px) {
+  .equipments--list--card {
+    width: 43% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .cover-catalog--titles {
+    flex-direction: column !important;
+    p{
+      margin-left: 0 !important;
+    }
+  }
+  .equipments--list--card{
+    margin: 20px 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 440px) {
+  .equipments--titles{
+    flex-direction: column;
+    h1{
+      margin: 10px 0;
+    }
+    p{
+      margin-left: 0!important;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+
+}

@@ -1,0 +1,20 @@
+.clients--titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6% 0;
+
+  h1 {
+    @extend %title;
+    width: 100%;
+    margin-right: 20px;
+    font-size: calc(24px + 40 * (100vw / 1400));
+    text-align: start;
+  }
+
+  p {
+    @extend %description;
+  }
+}
+
+

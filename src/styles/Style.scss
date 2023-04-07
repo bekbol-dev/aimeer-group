@@ -1,0 +1,25 @@
+// default styles
+@import "reset";
+@import "var";
+
+// page
+@import "../page/Home/home";
+@import "../page/Catalog/catalog";
+@import "../page/Clients/clients";
+@import "../page/Services/services";
+@import "../page/Work/work";
+@import "../page/AboutUs/style";
+
+// layout
+@import "../components/Navigation/layout";
+
+// ui components
+@import "../ui/Sponsors/style";
+@import "../components/ApplicationForm/style";
+@import "../components/ApplicationPhone/style";
+@import "../components/Reviews/style";
+@import "../components/OurServices/style";
+@import "../components/InfoCardleft/style";
+@import "../components/InfoCardRight/style";
+
+

@@ -1,0 +1,21 @@
+#sponsors {
+  background: #424242;
+  padding: 30px 0 30px 5%;
+  overflow: hidden;
+
+  .sponsor-container {
+    width: 100%;
+    padding: 0 10px;
+
+    .slick-slider > .slick-arrow{
+      display: none !important;
+    }
+    .slick-slider > .slick-dots{
+      display: none !important;
+    }
+
+    .s-icon {
+      margin: 0;
+    }
+  }
+}

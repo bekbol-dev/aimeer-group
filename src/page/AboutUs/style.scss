@@ -1,0 +1,72 @@
+#about-us{
+  padding: 5% 0;
+  .about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    h1{
+      @extend %title;
+      font-size: calc(18px + 36 * (100vw / 1400));
+    }
+    p{
+      @extend %description;
+      margin: 30px 0;
+    }
+  }
+  .about-us--image{
+    img{
+      width: 100%;
+    }
+  }
+  .advantages{
+    margin: 5% 0;
+    &--title{
+      @extend %title;
+      text-align: start;
+      margin:  0 auto;
+    }
+    &--list{
+      display: flex;
+      justify-content: space-between;
+      &--card{
+        background: #F5F5F5;
+        margin: 20px 10px;
+        width: 23%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        h3{
+          margin-top: 20px;
+          text-align: center;
+          @extend %medium-text;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .advantages--list{
+    flex-wrap: wrap;
+
+    &--card{
+      width: 45% !important;
+      margin: 20px 0 !important;
+      padding: 10px !important;
+      span{
+        display: flex;
+        justify-content: center;
+        width: 70%;
+
+      }
+    }
+  }
+}
+@media (max-width: 440px) {
+
+}
+@media (max-width: 375px) {
+
+}
