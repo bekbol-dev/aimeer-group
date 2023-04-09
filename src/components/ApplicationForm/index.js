@@ -7,7 +7,7 @@ import Input from "../../ui/Input";
 
 const ApplicationForm = () => {
   return (
-    <>
+    <div style={{marginTop: '10%'}}>
       <Container>
         <div className='feedback-titles'>
           <h1>Доверьтесь нашей команде,</h1>
@@ -46,7 +46,7 @@ const ApplicationForm = () => {
           </div>
         </Container>
       </div>
-    </>
+    </div>
   );
 };
 

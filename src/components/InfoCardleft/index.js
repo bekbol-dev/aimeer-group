@@ -2,7 +2,7 @@ import React from 'react';
 import Container from "../../ui/Container";
 import Button from "../../ui/Button";
 
-const InfoCardLeft = ({img1, img2, title, description, }) => {
+const InfoCardLeft = ({img1, img2, title, description,}) => {
   return (
     <div id='about'>
       <Container>

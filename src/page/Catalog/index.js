@@ -6,7 +6,7 @@ import BigVacuum from '../../media/img/vacuumBig.svg'
 
 const Catalog = () => {
   return (
-    <div>
+    <div id='catalog'>
       <CoverCatalog/>
       <Equipments/>
       <ApplicationPhone image={BigVacuum}/>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from "../../../ui/Container";
-import Disinfection2 from '../../../media/service_png/disinfection2.jpg'
+import Disinfection2 from '../../../media/service_png/disinfection2.svg'
 import DisinfectionDetail from '../../../media/service_png/detail-disinfection.jpg'
 import {useParams} from "react-router-dom";
 import {MdKeyboardArrowRight} from "react-icons/md";

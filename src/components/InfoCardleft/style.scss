@@ -8,13 +8,14 @@
 
     &--images {
       position: relative;
-      align-items: center;
+      //align-items: center;
       width: 472px;
+      min-height: 580px;
 
       &--2 {
         position: absolute;
         right: 0;
-        bottom: -20%;
+        bottom: -5%;
       }
     }
 
@@ -23,7 +24,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: start;
-      width: 666px;
+      width: 700px;
       margin: 0;
 
       h1 {
@@ -32,7 +33,7 @@
 
       p {
         @extend %description;
-        margin: 30px 0;
+        margin-bottom: 17%;
       }
 
       &--btn {

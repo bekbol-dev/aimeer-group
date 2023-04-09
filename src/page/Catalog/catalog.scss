@@ -1,2 +1,24 @@
 @import "./component/CoverCatalog/style";
 @import "./component/Equipments/style";
+
+#catalog{
+  .application--image {
+    img{
+      width: 35% !important;
+      bottom: -20% !important;
+      right: 10% !important;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  #catalog{
+    .application--image {
+      img{
+        bottom: -3% !important;
+        right: 10% !important;
+        width: 90% !important;
+      }
+    }
+  }
+}

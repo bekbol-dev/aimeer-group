@@ -9,7 +9,7 @@
     left: 0;
     top: 0;
     width: 5%;
-    height: 40%;
+    height: 43%;
     background: #F5AF14;
   }
 
@@ -17,7 +17,7 @@
     position: absolute;
     right: 13%;
     top: 0;
-    width: 15%;
+    width: 18%;
     height: 90%;
     background: #027534;
     z-index: 2;
@@ -37,7 +37,7 @@
     display: flex;
     justify-content: space-between;
     &--items {
-      width: 80%;
+      width: 55%;
       display: flex;
       position: relative;
       z-index: 10;
@@ -58,9 +58,10 @@
       &--inputs {
         padding-right: 40%;
         input{
-          padding: 20px;
+          padding: 30px 20px;
         }
         button{
+          padding: 30px 20px;
           &:hover{
             border: 1px solid #FFFFFF!important;
             color: #FFFFFF!important;
@@ -74,7 +75,7 @@
       z-index: 5;
       width: 50%;
       img{
-        width: 40%;
+        width: 43%;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -108,6 +109,8 @@
   }
   .application{
     flex-direction: column !important;
+    padding-bottom: 65%;
+    padding-top: 20%;
     //padding-bottom: 30%;
     .application--image{
       margin-top: 60%;
@@ -120,10 +123,34 @@
     .application--items{
       width: 100% !important;
       &--inputs{
-        //padding-right: 15% !important;
+        padding: 0 !important;
+        input{
+          width: 100% !important;
+        }
+      }
+    }
+    &--image{
+      img{
+        width: 100% !important;
       }
     }
   }
+  .shadow-box-left{
+    display: none;
+  }
+  .shadow-box-center {
+    left: 0 !important;
+    height: 338px !important;
+    bottom: 47px !important;
+    top: auto!important;
+    width: 230px !important;
+  }
+
+  .shadow-box-right {
+    width: 232px !important;
+    height: 338px !important;
+  }
+
 }
 @media (max-width: 375px) {
 

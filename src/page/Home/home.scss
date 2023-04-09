@@ -1,5 +1,19 @@
 // Cover
 
+#home{
+  .about--items > p {
+    margin-bottom: 0 !important;
+
+
+    //&--btn {
+    //  padding-right: 30px;
+    //  button{
+    //    padding: 46px 77px;
+    //  }
+    //}
+  }
+}
+
 #cover{
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -70,6 +84,7 @@
     }
   }
 }
+
 
 .numbers{
   padding: 10% 0;
