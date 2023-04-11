@@ -9,18 +9,30 @@ const pointsStar = [1, 2, 3, 4, 5]
 
 const Reviews = () => {
 
-
   const settings = {
-    // className: "center",
     dots: true,
-    speed: 500,
+    // speed: 500,
     slidesToShow: 1,
     centerMode: true,
-    centerPadding: "80px",
+    centerPadding: "400px",
     infinite: true,
+    className: 'center',
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "200px",
+          infinite: true,
+          className: 'center',
+          slidesToScroll: 1,
+          initialSlide: 0,
+        }
+      },
       {
         breakpoint: 1024,
         settings: {
@@ -32,8 +44,16 @@ const Reviews = () => {
         }
       },
       {
+        breakpoint: 912,
+        settings: {
+          dots: false,
+          centerMode: false,
+        }
+      },
+      {
         breakpoint: 600,
         settings: {
+          dots: false,
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
@@ -43,6 +63,7 @@ const Reviews = () => {
       {
         breakpoint: 480,
         settings: {
+          dots: false,
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: false,
@@ -50,6 +71,7 @@ const Reviews = () => {
       }
     ]
   };
+
   return (
     <div id='reviews'>
       <Container>
@@ -65,23 +87,25 @@ const Reviews = () => {
                   <div className='reviews--card--image'>
                     <img src={review.image} alt=""/>
                   </div>
-                  <div className='reviews--card--items'>
-                   <div>
-                     <span> <ImQuotesLeft/> </span>
-                     <div className='reviews--card--items--stars'>
-                       {
-                         pointsStar.map(star => (
-                           <AiFillStar style={{
-                             color: star <= review.points ? '#2AB057' : 'rgba(42,176,87,0.2)'
-                           }}/>
-                         ))
-                       }
-                     </div>
-                   </div>
-                    <p>{review.review}</p>
-                    <div>
-                      <h3>{review.name}</h3>
-                      <h5>{review.description}</h5>
+                  <div className='reviews--card--box'>
+                    <div className='reviews--card--box--items'>
+                      <div>
+                        <span> <ImQuotesLeft/> </span>
+                        <div className='reviews--card--box--items--stars'>
+                          {
+                            pointsStar.map(star => (
+                              <AiFillStar style={{
+                                color: star <= review.points ? '#2AB057' : 'rgba(42,176,87,0.2)'
+                              }}/>
+                            ))
+                          }
+                        </div>
+                        <p>{review.review}</p>
+                      </div>
+                      <div>
+                        <h3>{review.name}</h3>
+                        <h5>{review.description}</h5>
+                      </div>
                     </div>
                   </div>
                 </div>
