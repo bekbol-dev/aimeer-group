@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from "../../../ui/Container";
+import Disinfection1 from '../../../media/service_png/desintification1.svg'
 import Disinfection2 from '../../../media/service_png/disinfection2.svg'
 import DisinfectionDetail from '../../../media/service_png/detail-disinfection.jpg'
 import {useParams} from "react-router-dom";
@@ -31,7 +32,7 @@ function DetailPage(){
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lor</p>
             </div>
             <div className='detail-hero--image'>
-              <img src={Disinfection2} alt=""/>
+              <img src={Disinfection1} alt=""/>
               <img src={Disinfection2} alt=""/>
             </div>
           </div>
