@@ -15,7 +15,7 @@ import ApplicationGirl from '../../media/service_png/application-girl.svg'
 import InfoCardRight from "../../components/InfoCardRight";
 import ApplicationPhone from "../../components/ApplicationPhone";
 import Sponsors from "../../ui/Sponsors";
-import Reviews from "../../components/Reviews";
+import ApplicationForm from "../../components/ApplicationForm";
 
 const Services = () => {
   return (
@@ -59,7 +59,7 @@ const Services = () => {
 
       <ApplicationPhone image={ApplicationGirl}/>
       <Sponsors/>
-      <Reviews/>
+      <ApplicationForm/>
     </>
   );
 };
