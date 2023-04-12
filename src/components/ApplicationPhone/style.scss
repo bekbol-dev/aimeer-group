@@ -75,7 +75,7 @@
       z-index: 5;
       width: 50%;
       img{
-        width: 43%;
+        width: 40%;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -86,8 +86,10 @@
 }
 
 
-@media (max-width: 1024px) {
-
+@media (max-width: 1550px) {
+  .application--image > img{
+    width: 44% !important;
+  }
 }
 @media (max-width: 912px) {
   .application--image{

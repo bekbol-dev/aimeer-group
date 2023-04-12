@@ -20,7 +20,7 @@ const ApplicationPhone = ({image}) => {
            </div>
           </div>
           <div className='application--image'>
-            <img src={image} alt=""/>
+            <img  src={image} alt=""/>
           </div>
         </div>
       </Container>
