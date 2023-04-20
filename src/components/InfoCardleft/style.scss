@@ -17,6 +17,13 @@
         right: 0;
         bottom: -5%;
       }
+      &--1 {
+        position: relative;
+        transition: .3s;
+        &:hover{
+          z-index: 4;
+        }
+      }
     }
 
     &--items {

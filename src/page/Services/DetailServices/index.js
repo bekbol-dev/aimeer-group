@@ -5,12 +5,11 @@ import Disinfection2 from '../../../media/service_png/disinfection2.svg'
 import DisinfectionDetail from '../../../media/service_png/detail-disinfection.jpg'
 import {useParams} from "react-router-dom";
 import {MdKeyboardArrowRight} from "react-icons/md";
-import {GoPrimitiveDot} from "react-icons/go";
+import {GoPlus, GoPrimitiveDot} from "react-icons/go";
 import OurServices from "../../../components/OurServices";
 import Sponsors from "../../../ui/Sponsors";
 import Reviews from "../../../components/Reviews";
 import ApplicationForm from "../../../components/ApplicationForm";
-
 const list = [
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus massa, scelerisque at dignissim ac, blandit ut tortor. Suspendisse ris',
   'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
@@ -20,6 +19,8 @@ const list = [
   'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
   'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
 ]
+
+const disinfection = ['Мытье потолка', 'Мытье полов', 'Дезинфекция мебели', 'Стол', 'Доска']
 
 function DetailPage(){
   return (
@@ -43,7 +44,16 @@ function DetailPage(){
           <h1 className='detail--title'>Что входит в дезинфекцию и дезинсекцию коммерческих помещений</h1>
         </Container>
         <div className='detail--image'>
-          <img src={DisinfectionDetail} alt=""/>
+          {
+            disinfection.map((el,idx) => (
+              <div className={`detail--image--plus plus${idx +1}`}>
+                <div className='detail--image--plus--icon'><GoPlus/></div>
+                <div className='detail--image--plus--desc'>
+                  {el}
+                </div>
+              </div>
+            ))
+          }
         </div>
         <Container>
           <div className='detail-description'>

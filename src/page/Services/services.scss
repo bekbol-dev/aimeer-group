@@ -62,10 +62,69 @@
   }
 
   .detail--image {
+    background: url("../../media/service_png/detail-disinfection.jpg") no-repeat center/cover;
+    min-height: 80vh;
     width: 100%;
-
-    img {
-      width: 100%;
+    position: relative;
+    &--plus{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      &--icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #2AB057;
+        color: #FFFFFF;
+        font-size: 1.2rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 3px solid #F4F4F4;
+        opacity: .5;
+        transition: .2s;
+      }
+      &--desc{
+        @extend %medium-text;
+        font-size: 18px;
+        padding: 15px 30px;
+        background: #F4F4F4;
+        width: 230px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: .3s;
+      }
+      &:hover{
+        .detail--image--plus--icon{
+          opacity: 1;
+        }
+        .detail--image--plus--desc{
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+    .plus1{
+      left: 36%;
+      top: 5%;
+    }
+    .plus2{
+      left: 1%;
+      bottom: 10%;
+    }
+    .plus3{
+      left: 40%;
+      bottom: 18%;
+    }
+    .plus4{
+      right: 25%;
+      bottom: 25%;
+    }
+    .plus5{
+      right: 1%;
+      top: 40%;
     }
   }
 

@@ -4,11 +4,13 @@
       display: flex;
       justify-content: space-between;
       align-items: start;
-      h1{
+
+      h1 {
         width: 100%;
         @extend %title;
       }
-      p{
+
+      p {
         margin-left: 10%;
         @extend %description;
       }
@@ -24,11 +26,12 @@
       &--card {
         width: 350px;
         margin: 20px;
-
+        cursor: pointer;
         &--image {
           width: 100%;
           background: #F5F5F5;
           padding: 20px 2rem;
+          transition: .2s;
 
           img {
             width: 95%;
@@ -38,6 +41,7 @@
         h3 {
           margin: 10px 0;
           @extend %medium-text;
+          transition: .2s;
         }
 
         p {
@@ -45,8 +49,19 @@
           font-size: calc(10px + 6 * (100vw / 1400));
           line-height: 120%;
         }
+
+        &:hover {
+          .equipments--list--card--image {
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          }
+
+          h3 {
+            color: #2AB057;
+          }
+        }
       }
     }
+
     &--adaptive {
       padding: 5% 0;
       display: none;
@@ -108,20 +123,21 @@
 @media (max-width: 768px) {
   .cover-catalog--titles {
     flex-direction: column !important;
-    p{
+
+    p {
       margin-left: 0 !important;
     }
   }
-  .equipments--list--card{
+  .equipments--list--card {
     margin: 20px 0 !important;
   }
-  .equipments--adaptive--card{
+  .equipments--adaptive--card {
     margin: 20px 0 !important;
   }
 }
 
 @media (max-width: 576px) {
-  .view-more{
+  .view-more {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 20px;
@@ -130,22 +146,24 @@
     color: #2AB057;
     text-decoration: underline;
   }
-  .equipments--list{
+  .equipments--list {
     display: none !important;
   }
-  .equipments--adaptive{
+  .equipments--adaptive {
     display: flex !important;
   }
 }
 
 @media (max-width: 440px) {
-  .equipments--titles{
+  .equipments--titles {
     flex-direction: column;
-    h1{
+
+    h1 {
       margin: 10px 0;
     }
-    p{
-      margin-left: 0!important;
+
+    p {
+      margin-left: 0 !important;
     }
   }
 }

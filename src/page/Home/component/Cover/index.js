@@ -20,21 +20,24 @@ const Cover = () => {
   }
 
   const onMouseMove = (event) => {
-    if (dropUp) {
+    // if (true) {
       setWidthDirty(window.innerWidth - event.clientX)
       setLastCoordinate(prev => [...prev, event.clientX])
       if (lastCoordinate.length > 1){
         lastCoordinate.shift()
          setArrowRight(lastCoordinate[0] < lastCoordinate[1])
       }
-    }
+    // }
   }
 
   return (
     <div id='cover'
          onMouseUp={onDropUp}
          onMouseMove={onMouseMove}
-         onMouseOver={() => setArrowShow(true)}
+         onMouseOver={(event) => {
+           setArrowShow(true)
+           onMouseMove(event)
+         }}
          onMouseLeave={() => setTimeout(() => setArrowShow(false), 500)}
     >
       {

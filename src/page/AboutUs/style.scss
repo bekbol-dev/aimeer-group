@@ -44,6 +44,12 @@
           text-align: center;
           @extend %medium-text;
         }
+        &:hover{
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          span > svg > path {
+            stroke: #2AB057;
+          }
+        }
       }
     }
   }
@@ -62,6 +68,7 @@
       width: 45% !important;
       margin: 20px 0 !important;
       padding: 10px !important;
+      transition: .2s;
       span{
         display: flex;
         justify-content: center;
