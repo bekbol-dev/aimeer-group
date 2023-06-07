@@ -11,7 +11,7 @@ const Cover = () => {
   const [arrowToRight, setArrowRight] = useState(true)
   const [dropUp, setDropUp] = useState(false)
   const debounced = useDebounce(arrowToRight)
-  const coords = [0, 150, 350, WIDTH / 2, WIDTH - 350, WIDTH - 150, WIDTH-4]
+  const coords = [0, 130, 330, WIDTH / 2, WIDTH - 330, WIDTH - 130, WIDTH-4]
   const onDropUp = () => {
     setDropUp(false)
   }
@@ -31,15 +31,7 @@ const Cover = () => {
   }
 
   return (
-    <div id='cover'
-         onMouseUp={onDropUp}
-         onMouseMove={onMouseMove}
-         onMouseOver={(event) => {
-           setArrowShow(true)
-           onMouseMove(event)
-         }}
-         onMouseLeave={() => setTimeout(() => setArrowShow(false), 500)}
-    >
+    <div id='cover'>
       {
         coords.map((coordinates,idx) => (
           <div
@@ -50,21 +42,7 @@ const Cover = () => {
             className={`coordinates coordinate${idx+1}`}></div>
         ))
       }
-      <div style={{
-        width: widthDirty + 'px',
-      }} className='blur-window'>
-        <div className='blur-window--layer'>
-          { arrowShow && <div
-              onMouseDown={onDropDown}
-              onMouseUp={onDropUp}
-              style={{
-                transform: debounced ? "rotate(0)" : "rotate(180deg)",
-                left: lastCoordinate[0] > 30 ? '-25px' : '0'
-              }}
-              className='arrow-icon'>
-              <SlArrowRight/>
-            </div> }
-        </div>
+      <div className='blur-window'>
       </div>
       <Container>
         <div className='cover'>

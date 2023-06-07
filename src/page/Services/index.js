@@ -57,7 +57,7 @@ const Services = () => {
         description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus massa, scelerisque at dignissim ac, blandit ut tortor. Suspendisse risus risus, bibendum et est sit amet, bibendum cursus leo. In nec placerat lectus, sed accumsan eros. Fusce imperdiet id nisi quis pretium. In eget diam quis mi semper gravida. Ut fringilla pellentesque enim a placerat. '}
       />
 
-      <ApplicationPhone image={ApplicationGirl}/>
+      {/*<ApplicationPhone image={ApplicationGirl}/>*/}
       <Sponsors/>
       <ApplicationForm/>
     </>

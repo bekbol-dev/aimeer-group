@@ -29,25 +29,17 @@
     &--items {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: start;
       width: 700px;
-      margin: 0;
 
       h1 {
         @extend %title;
+        margin-bottom: 40px;
       }
 
       p {
         @extend %description;
         margin-bottom: 17%;
-      }
-
-      &--btn {
-        padding-right: 30px;
-        button{
-          padding: 46px 77px;
-        }
       }
     }
   }

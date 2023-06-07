@@ -6,6 +6,7 @@ import Reviews from "../../components/Reviews";
 import ApplicationForm from "../../components/ApplicationForm";
 import InfoCardRight from "../../components/InfoCardRight";
 import Container from "../../ui/Container";
+import Certificate from "../../components/Certificate";
 
 const Clients = () => {
   return (
@@ -29,6 +30,7 @@ const Clients = () => {
         <Sponsors/>
       </div>
       <Reviews/>
+      <Certificate/>
       <ApplicationForm/>
 
     </>

@@ -6,10 +6,6 @@ import Button from "../../../ui/Button";
 const Resume = () => {
   return (
     <div id='resume'>
-      <div className='shadow-box-first'/>
-      <div className='shadow-box-second'/>
-      <div className='shadow-box-third'/>
-      <div className='shadow-box-fourth'/>
       <Container>
         <div className="resume">
           <h1>Отправить резюме</h1>
@@ -19,8 +15,8 @@ const Resume = () => {
             <Input placeholder='Ваш телефон'/>
           </div>
           <div className='resume--params'>
-            <Input placeholder='Позиция (опционально)'/>
-            <Input placeholder='Ваше сообщение'/>
+            <input placeholder='Позиция (опционально)'/>
+            <input placeholder='Ваше сообщение'/>
           </div>
           <div className='resume--params'>
            <Button fontSize={20} bg={'dark'}>Прикрепить резюме</Button>

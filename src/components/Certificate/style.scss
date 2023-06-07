@@ -1,0 +1,32 @@
+
+#certificate {
+  margin: 10% 0;
+
+  .certificate {
+    &--title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 8% 0;
+
+      h1 {
+        @extend %title;
+      }
+
+      span {
+        @extend %medium-text;
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .certificate--title {
+    span {
+      display: none
+    }
+  }
+}

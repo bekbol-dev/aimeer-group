@@ -11,7 +11,6 @@ const Reviews = () => {
 
   const settings = {
     dots: true,
-    // speed: 500,
     slidesToShow: 1,
     centerMode: true,
     centerPadding: "400px",

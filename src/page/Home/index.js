@@ -8,6 +8,7 @@ import InfoCardLeft from "../../components/InfoCardleft";
 import Company1 from '../../media/img/aboutCompany1.png'
 import Company2 from '../../media/img/aboutCompany2.png'
 import NumbersStatic from "./component/NumbersStatic";
+import Certificate from "../../components/Certificate";
 
 const Home = () => {
   return (
@@ -30,6 +31,7 @@ const Home = () => {
       <NumbersStatic/>
       <Sponsors/>
       <Reviews/>
+      <Certificate/>
       <OurServices title={'Наши услуги'}/>
       <ApplicationForm/>
     </div>
