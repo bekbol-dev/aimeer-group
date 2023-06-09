@@ -1,11 +1,25 @@
 import React from 'react';
+import {Formik, ErrorMessage} from 'formik'
+import * as yup from 'yup'
 import Container from "../../ui/Container";
 import {BsTelephoneFill} from "react-icons/bs";
 import {MdEmail} from "react-icons/md";
-import Button from "../../ui/Button";
 import Input from "../../ui/Input";
+import {postFeedback} from "../../store/FeedbackReducer/feedbackActions";
+import {useDispatch, useSelector} from "react-redux";
 
 const ApplicationForm = () => {
+  const {isError, isLoading} = useSelector(state => state.FeedbackReducer)
+  const dispatch = useDispatch()
+  const validationSchema = yup.object().shape({
+    phone_number: yup.number().typeError("Должно быть числом").required('Обязательно'),
+    email: yup.string().email("Введите верный email"),
+  })
+
+  const postFormData = (data) => {
+    dispatch(postFeedback(data))
+  }
+
   return (
     <div style={{marginTop: '10%'}}>
       <Container>
@@ -33,15 +47,51 @@ const ApplicationForm = () => {
                   <h4>limpio.bishkek@gmail.com</h4>
                 </a>
               </div>
-              <div className='feedback-box--form'>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus massa, scelerisque at dignissim
-                  ac, blandit u</p>
+              <Formik
+                initialValues={{
+                  phone_number: '', email: '',
+                }}
+                validateOnBlur
+                onSubmit={postFormData}
+                validationSchema={validationSchema}
+              >
+                {({values, handleBlur, handleChange, isValid, handleSubmit, errors, touched, dirty}) => (
+                  <div className='feedback-box--form'>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus massa, scelerisque at
+                      dignissim
+                      ac, blandit u</p>
 
-                <Input placeholder={'Ваш телефон'}/>
-                <Input type={'email'} placeholder={'Ваш email'}/>
+                    <Input
+                      onBlur={handleBlur}
+                      onChange={handleChange}
+                      value={values.phone_number}
+                      type='tel' name='phone_number'
+                      placeholder={'Ваш телефон'}
+                    />
+                    <Input
+                      onBlur={handleBlur}
+                      onChange={handleChange}
+                      value={values.email}
+                      name='email'
+                      type={'email'}
+                      placeholder={'Ваш email'}
+                    />
 
-                <Button fontSize={20}>Отправить&nbsp;заявку</Button>
-              </div>
+                    <button
+                      disabled={!isValid && !dirty}
+                      onClick={() => handleSubmit()}
+                      type='submit'
+                      style={{
+                        fontSize: '20px',
+                        background: '#2AB057',
+                        color: '#FFFFFF',
+                      }}
+                      className='green-btn'>
+                      {isLoading? 'Loading...': 'Отправить заявку'}
+                    </button>
+                  </div>
+                )}
+              </Formik>
             </div>
           </div>
         </Container>

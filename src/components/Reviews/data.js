@@ -1,4 +1,3 @@
-import Review2 from '../../media/img/review-img.png'
 import Review1 from '../../media/service_png/Review2.png'
 import Review3 from '../../media/service_png/Review3.png'
 

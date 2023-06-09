@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Container from "../../ui/Container";
-import {reviews} from "./data";
+import ReviewImg from '../../media/img/review-img.png'
 import {ImQuotesLeft} from "react-icons/im";
 import {AiFillStar} from "react-icons/ai";
 import Slider from 'react-slick'
+import {getReviews} from "./ReviewReducer/reviewActions";
+import {useDispatch, useSelector} from "react-redux";
 
 const pointsStar = [1, 2, 3, 4, 5]
 
 const Reviews = () => {
-
+const dispatch = useDispatch()
+  const {reviews, isError, isLoading} = useSelector(state => state.ReviewReducer)
   const settings = {
     dots: true,
     slidesToShow: 1,
@@ -71,6 +74,9 @@ const Reviews = () => {
     ]
   };
 
+  useEffect(() => {
+    dispatch(getReviews())
+  }, [])
   return (
     <div id='reviews'>
       <Container>
@@ -81,10 +87,10 @@ const Reviews = () => {
           </div>
           <Slider {...settings}>
             {
-              reviews.map(review => (
+              reviews?.map(review => (
                 <div key={review.id} className='reviews--card'>
                   <div className='reviews--card--image'>
-                    <img src={review.image} alt=""/>
+                    <img src={ReviewImg} alt=""/>
                   </div>
                   <div className='reviews--card--box'>
                     <div className='reviews--card--box--items'>
@@ -94,16 +100,16 @@ const Reviews = () => {
                           {
                             pointsStar.map(star => (
                               <AiFillStar style={{
-                                color: star <= review.points ? '#2AB057' : 'rgba(42,176,87,0.2)'
+                                color: star <= review.star ? '#2AB057' : 'rgba(42,176,87,0.2)'
                               }}/>
                             ))
                           }
                         </div>
-                        <p>{review.review}</p>
+                        <p>{review.text}</p>
                       </div>
                       <div>
-                        <h3>{review.name}</h3>
-                        <h5>{review.description}</h5>
+                        <h3>{review.full_name}</h3>
+                        <h5>{review.position}</h5>
                       </div>
                     </div>
                   </div>

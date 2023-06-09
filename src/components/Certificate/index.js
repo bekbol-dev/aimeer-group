@@ -1,21 +1,27 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Container from "../../ui/Container";
 import Slider from 'react-slick'
 import CertificateImg from "../../media/img/certificate.jpg"
 import Fancybox from "./Fancybox";
+import {useDispatch, useSelector} from "react-redux";
+import {getCertificate} from "./CertificateReducer/certificateActions";
 
 const data = [CertificateImg, CertificateImg,CertificateImg,CertificateImg,CertificateImg,CertificateImg,CertificateImg,CertificateImg]
 
 const Certificate = () => {
 
-
+  const dispatch = useDispatch()
+  const {certificates, isError, isLoading} = useSelector(state => state.certificateReducer)
+  console.log(certificates)
+  useEffect(() => {
+    dispatch(getCertificate())
+  }, [])
 
   const settings = {
     dots: true,
-    // speed: 500,
-    slidesToShow: 1,
-    centerMode: true,
-    centerPadding: "400px",
+    slidesToShow: 4,
+    centerMode: false,
+    // centerPadding: "400px",
     infinite: true,
     className: 'center',
     slidesToScroll: 1,
@@ -60,7 +66,8 @@ const Certificate = () => {
           dots: false,
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: false,
+          centerPadding: "30px",
+          centerMode: true,
         }
       }
     ]
@@ -77,14 +84,14 @@ const Certificate = () => {
          <Fancybox
            options={{
              Carousel: {
-               infinite: false,
+               infinite: true,
              },
            }}
          >
            <Slider {...settings}>
-             {data.map(image => (
-               <a className='certificate--image' data-fancybox="gallery" href={image}>
-                 <img src={image} alt="" width={300}/>
+             {certificates.map(el => (
+               <a key={el.id} data-fancybox="gallery" href={el.image}>
+                 <img src={el.image} alt="" width={300}/>
                </a>
              ))}
            </Slider>

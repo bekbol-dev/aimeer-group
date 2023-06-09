@@ -30,13 +30,18 @@
 
       &--inputs {
         padding-right: 40%;
+        width: 100%;
+
+        .formik {
+          width: 100%;
+        }
 
         input {
           padding: 30px 20px;
           width: 100%;
           font-size: 18px;
           font-weight: 400;
-          margin-bottom: 20px;
+          margin-top: 20px;
           color: black;
           background: transparent;
           border: 1px solid rgba(66, 66, 66, 0.3);
@@ -98,7 +103,13 @@
 }
 
 @media (max-width: 768px) {
+  .application--items {
 
+    &--inputs {
+      padding: 0!important;
+      width: auto !important;
+    }
+  }
 }
 
 @media (max-width: 440px) {
@@ -114,7 +125,6 @@
       margin-top: 60%;
 
       img {
-        top: auto !important;
         bottom: 0 !important;
         right: 0 !important;
       }
@@ -124,6 +134,7 @@
       width: 100% !important;
 
       &--inputs {
+        width: auto !important;
         padding: 0 !important;
 
         input {

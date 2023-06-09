@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Container from "../../../../ui/Container";
 import Vacuum from '../../../../media/img/vacuum.svg'
+import {getProducts} from "../../CatelogReducer/catalogActions";
+import {useDispatch, useSelector} from "react-redux";
+import {catalogReducer} from "../../CatelogReducer/catalogReducer";
 
 const equipments = [
   {
@@ -60,6 +63,13 @@ const equipments = [
 ]
 
 const Equipments = () => {
+  const dispatch = useDispatch()
+  const {products, isError, isLoading} = useSelector(state => state.catalogReducer)
+
+  useEffect(() => {
+    dispatch(getProducts())
+  }, [])
+
   return (
     <div id='equipments'>
       <Container>
