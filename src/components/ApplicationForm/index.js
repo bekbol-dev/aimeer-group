@@ -1,5 +1,6 @@
 import React from 'react';
-import {Formik, ErrorMessage} from 'formik'
+import {Formik} from 'formik'
+import toast, {Toaster} from "react-hot-toast";
 import * as yup from 'yup'
 import Container from "../../ui/Container";
 import {BsTelephoneFill} from "react-icons/bs";
@@ -17,7 +18,7 @@ const ApplicationForm = () => {
   })
 
   const postFormData = (data) => {
-    dispatch(postFeedback(data))
+    dispatch(postFeedback(data, toast))
   }
 
   return (
@@ -89,6 +90,10 @@ const ApplicationForm = () => {
                       className='green-btn'>
                       {isLoading? 'Loading...': 'Отправить заявку'}
                     </button>
+                    <Toaster
+                      position="top-center"
+                      reverseOrder={false}
+                    />
                   </div>
                 )}
               </Formik>

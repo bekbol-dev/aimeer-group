@@ -1,11 +1,10 @@
 import React from 'react';
 import Container from "../../ui/Container";
-import Input from "../../ui/Input";
-import Button from "../../ui/Button";
 import {useDispatch, useSelector} from "react-redux";
 import {Formik, ErrorMessage} from 'formik'
 import * as yup from 'yup'
 import {postFeedback} from "../../store/FeedbackReducer/feedbackActions";
+import toast, {Toaster} from "react-hot-toast";
 
 const ApplicationPhone = ({image}) => {
   const {isError, isLoading} = useSelector(state => state.FeedbackReducer)
@@ -16,7 +15,7 @@ const ApplicationPhone = ({image}) => {
   })
 
   const postFormData = (data) => {
-    dispatch(postFeedback(data))
+    dispatch(postFeedback(data, toast))
   }
   return (
     <div id='application'>
@@ -68,6 +67,10 @@ const ApplicationPhone = ({image}) => {
           </div>
         </div>
       </Container>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
     </div>
   );
 };

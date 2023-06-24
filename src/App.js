@@ -7,6 +7,7 @@ import Clients from "./page/Clients";
 import DetailServices from "./page/Services/DetailServices";
 import Home from "./page/Home";
 import AboutUs from "./page/AboutUs";
+import ViewMore from "./components/Certificate/ViewMore";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path={'/work'} element={<Work/>}/>
         <Route path={'/clients'} element={<Clients/>}/>
         <Route path={'/services/:name'} element={<DetailServices/>}/>
+        <Route path={'/all-certificates'} element={<ViewMore/>}/>
       </Routes>
     </div>
   );

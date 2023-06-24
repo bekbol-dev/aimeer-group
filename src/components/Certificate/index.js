@@ -1,18 +1,17 @@
 import React, {useEffect} from 'react';
 import Container from "../../ui/Container";
 import Slider from 'react-slick'
-import CertificateImg from "../../media/img/certificate.jpg"
 import Fancybox from "./Fancybox";
 import {useDispatch, useSelector} from "react-redux";
 import {getCertificate} from "./CertificateReducer/certificateActions";
+import Loader from "../Loader";
+import {Link} from "react-router-dom";
 
-const data = [CertificateImg, CertificateImg,CertificateImg,CertificateImg,CertificateImg,CertificateImg,CertificateImg,CertificateImg]
 
 const Certificate = () => {
 
   const dispatch = useDispatch()
   const {certificates, isError, isLoading} = useSelector(state => state.certificateReducer)
-  console.log(certificates)
   useEffect(() => {
     dispatch(getCertificate())
   }, [])
@@ -79,9 +78,10 @@ const Certificate = () => {
        <div className='certificate'>
          <div className='certificate--title'>
            <h1>О нас словами наших клиентов</h1>
-           <span>Показать все</span>
+           <Link to='/all-certificates'><span>Показать все</span></Link>
          </div>
-         <Fancybox
+         {isLoading && <Loader/>}
+         {!isLoading && <Fancybox
            options={{
              Carousel: {
                infinite: true,
@@ -95,7 +95,7 @@ const Certificate = () => {
                </a>
              ))}
            </Slider>
-         </Fancybox>
+         </Fancybox>}
        </div>
       </Container>
     </div>

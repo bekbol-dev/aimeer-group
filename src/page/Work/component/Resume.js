@@ -3,6 +3,7 @@ import Container from "../../../ui/Container";
 import {Formik} from 'formik'
 import * as yup from 'yup'
 import Button from "../../../ui/Button";
+import toast, {Toaster} from "react-hot-toast";
 import Input from "../../../ui/Input";
 import {useDispatch, useSelector} from "react-redux";
 import {sendResume} from "../ResumeReducer/resumeActions";
@@ -18,7 +19,7 @@ const Resume = () => {
   })
 
   const postFormData = (data) => {
-    dispatch(sendResume(data))
+    dispatch(sendResume(data, toast))
   }
 
   return (
@@ -87,6 +88,10 @@ const Resume = () => {
           )}
         </Formik>
       </Container>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
     </div>
   );
 };
