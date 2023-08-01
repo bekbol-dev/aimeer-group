@@ -74,11 +74,6 @@ const Equipments = () => {
     <div id='equipments'>
       <Container>
         <div className='equipments'>
-          <div className='equipments--titles'>
-            <h1>Каталог оборудования</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit.</p>
-          </div>
 
           <div className='equipments--list'>
             {

@@ -16,6 +16,7 @@ const services = [
     </svg>
     ,
     title: 'Уборка внутренних помещений',
+    path: '/services',
   },
   {
     color: '#424242',
@@ -25,6 +26,7 @@ const services = [
     </svg>
     ,
     title: 'Химчистка мебели и ковролина',
+    path: '/services',
   },
   {
     color: '#424242',
@@ -34,6 +36,7 @@ const services = [
     </svg>
     ,
     title: 'Уборка территорий',
+    path: '/services',
   },
   {
     color: '#424242',
@@ -43,6 +46,7 @@ const services = [
     </svg>
     ,
     title: 'Мойка фасада и окон',
+    path: '/services',
   },
   {
     color: '#424242',
@@ -52,6 +56,7 @@ const services = [
     </svg>
     ,
     title: 'Дезинфекция и дезинсекция коммерческих помещений',
+    path: '/services-des',
   },
 ]
 
@@ -74,7 +79,7 @@ const OurServices = ({title}) => {
             {
               services.map(s => (
                 <a
-                   onClick={() => ScrollToHead(`/services/${s.title}`)}
+                   onClick={() => ScrollToHead(s.path)}
                    key={s.title} className='our-services--items--card'>
                    <h3>{s.title}</h3>
                    <span style={{

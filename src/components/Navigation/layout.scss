@@ -56,13 +56,13 @@
 
 #footer{
   border-top: 2px solid rgba(0, 0, 0, 0.1);
-  padding: 3% 0;
+  padding: 0 0 3% 0;
   .footer{
     &--items{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 7%;
+      margin-top: 4%;
       p{
         @extend %medium-text;
         font-weight: 400;

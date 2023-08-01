@@ -29,7 +29,6 @@ const Clients = () => {
       <div style={{marginTop: '5%'}}>
         <Sponsors/>
       </div>
-      <Reviews/>
       <Certificate/>
       <ApplicationForm/>
 

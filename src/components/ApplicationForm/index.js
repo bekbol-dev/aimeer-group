@@ -41,7 +41,7 @@ const ApplicationForm = () => {
                 </a>
                 <a href='tel:0550302355'>
                   <span><BsTelephoneFill/></span>
-                  <h4>0550302355</h4>
+                  <h4>+996 500 30 23 55</h4>
                 </a>
                 <a href='mailto:limpio.bishkek@gmail.com'>
                   <span><MdEmail/></span>

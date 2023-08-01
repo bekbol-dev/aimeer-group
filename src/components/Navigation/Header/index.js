@@ -46,11 +46,11 @@ const Header = () => {
                 ))
               }
             </nav>
-            <div className='header-btn'>
+            <a className='header-btn' href='tel:996500302355'>
               <Button
                 children={'Позвонить'}
                 fontSize={16}/>
-            </div>
+            </a>
             <div onClick={toggleBurger} className={`header-burger ${burger ? 'burger-active' : ''}`}>
               <div className='header-burger--item item1'/>
               <div className='header-burger--item item2'/>

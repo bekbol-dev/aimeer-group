@@ -23,14 +23,17 @@ const Home = () => {
           flexDirection: 'column',
           alignItems: 'start'
         }}>
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus massa, scelerisque at dignissim ac, blandit ut tortor. Suspendisse risus risus, bibendum et est sit amet, bibendum cursus leo. In nec placerat lectus, sed accumsan eros. Fusce imperdiet id nisi quis pretium. In eget diam quis mi semper gravida. Ut fringilla pellentesque enim a placerat.</span>
-          <span style={{margin: '30px 0'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus massa, scelerisque at dignissim ac, blandit ut tortor. Suspendisse risus risus, bibendum et est sit amet, bibendum cursus leo. In nec placerat lectus, sed accumsan eros.</span>
+          <span><b>Компания «Aimeer Group»</b> – это профессиональный клининг коммерческих помещений.</span>
+          <span style={{margin: '10px 0 20px 0'}}>Мы поддерживаем ваше пространство в чистоте и порядке, чтобы вы могли сосредоточиться на том,
+            что важно. AiMeer Group предоставляет первоклассные услуги по уборке коммерческих помещений
+            с использованием профессиональных инструментов, инвентаря и оборудования. Мы работаем на
+            любых площадях и с любыми загрязнениями, готовы качественно навести чистоту на тысячах квадратных метров.</span>
+          <span>«Aimeer Group» – чистота, качество, оперативность.</span>
         </div>
-          }
+        }
       />
       <NumbersStatic/>
       <Sponsors/>
-      <Reviews/>
       <Certificate/>
       <OurServices title={'Наши услуги'}/>
       <ApplicationForm/>

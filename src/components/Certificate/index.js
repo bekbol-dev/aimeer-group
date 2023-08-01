@@ -77,7 +77,7 @@ const Certificate = () => {
       <Container>
        <div className='certificate'>
          <div className='certificate--title'>
-           <h1>О нас словами наших клиентов</h1>
+           <h1>Отзывы наших клиентов</h1>
            <Link to='/all-certificates'><span>Показать все</span></Link>
          </div>
          {isLoading && <Loader/>}

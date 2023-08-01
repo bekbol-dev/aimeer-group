@@ -10,21 +10,6 @@ const Footer = () => {
     <div id='footer'>
       <Container>
         <div className="footer">
-          <div className='header'>
-            <Link to={'/'} className={'header-logo'}>
-              <img width={250} src={LOGO} alt=""/>
-            </Link>
-            <nav>
-              {
-                header_navigate.map(n => (
-                  <NavLink key={n.path} to={n.path}>{n.text}</NavLink>
-                ))
-              }
-            </nav>
-            <div className='footer-btn'>
-              <Button fontSize={16}>Быстрая&nbsp;заявка</Button>
-            </div>
-          </div>
           <div className='footer--items'>
             <p>Политика конфиденциальности</p>
             <p>Все права защищены © 2023</p>
