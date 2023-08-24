@@ -21,6 +21,18 @@
   padding: 30px 0;
 }
 
+.main-service-img{
+  background: url("../../media/service_png/mainService.jpg") no-repeat center / cover;
+  min-height: 681px;
+  object-fit: cover;
+}
+
+.team-image{
+  background: url("../../media/img/team-image.jpg") no-repeat top / cover;
+  min-height: 781px;
+  object-fit: cover;
+}
+
 #resume{
   padding: 5% 0;
   background: #F5F5F5;

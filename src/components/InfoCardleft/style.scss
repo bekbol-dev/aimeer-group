@@ -15,7 +15,7 @@
       &--2 {
         position: absolute;
         right: 0;
-        bottom: -5%;
+        top: 10%;
       }
       &--1 {
         position: relative;
@@ -31,6 +31,7 @@
       flex-direction: column;
       align-items: start;
       width: 700px;
+      margin-left: 20px;
 
       h1 {
         @extend %title;
@@ -62,6 +63,7 @@
     }
     &--items{
       width: 100% !important;
+      margin-left: 0!important;
       &--btn {
         width: 100%;
         padding-right: 0 !important;

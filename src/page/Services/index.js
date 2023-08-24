@@ -3,17 +3,15 @@ import Container from "../../ui/Container";
 import InfoCardLeft from "../../components/InfoCardleft";
 import Uborka1 from '../../media/service_png/uborka1.png'
 import Uborka2 from '../../media/service_png/uborka2.png'
-import Mebel1 from '../../media/service_png/mebel1.svg'
-import Mebel2 from '../../media/service_png/mebel2.svg'
+import Mebel2 from '../../media/service_png/mebel1.jpg'
+import Mebel1 from '../../media/service_png/mebel2.jpg'
 import Territory1 from '../../media/service_png/territory1.png'
 import Territory2 from '../../media/service_png/uborka3.svg'
-import Moika1 from '../../media/service_png/moika1.png'
+import Moika1 from '../../media/service_png/moika1.jpg'
 import Moika2 from '../../media/service_png/moika2.png'
 import Disinfection1 from '../../media/service_png/desintification1.svg'
 import Disinfection2 from '../../media/service_png/disinfection2.svg'
-import ApplicationGirl from '../../media/service_png/application-girl.svg'
 import InfoCardRight from "../../components/InfoCardRight";
-import ApplicationPhone from "../../components/ApplicationPhone";
 import Sponsors from "../../ui/Sponsors";
 import ApplicationForm from "../../components/ApplicationForm";
 
@@ -53,7 +51,7 @@ const Services = () => {
         <Container>
           <h1 className={'services--title'}>Наши услуги</h1>
         </Container>
-        <div className='empty-place'>Place for image</div>
+        <div className='main-service-img'></div>
       </div>
       <InfoCardLeft
         img1={Uborka1}

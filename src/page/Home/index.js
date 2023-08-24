@@ -5,8 +5,8 @@ import Cover from "./component/Cover";
 import Reviews from "../../components/Reviews";
 import OurServices from "../../components/OurServices";
 import InfoCardLeft from "../../components/InfoCardleft";
-import Company1 from '../../media/img/aboutCompany1.png'
-import Company2 from '../../media/img/aboutCompany2.png'
+import Company1 from '../../media/img/aboutCompany1.jpg'
+import Company2 from '../../media/img/aboutCompany2.jpg'
 import NumbersStatic from "./component/NumbersStatic";
 import Certificate from "../../components/Certificate";
 
